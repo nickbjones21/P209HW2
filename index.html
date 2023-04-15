@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW 3
+    </title>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+  <body>
+        <h1>Pizza Order</h1> 
+
+        <form action="/order_complete.html">
+
+        <!--pizza size-->
+        <h3>Select Pizza Size</h3>
+        <div id="pizza_size">
+          <input type="radio" id="small" name="za_size" value="small" required>
+          <label for="small">Small</label><br>
+          <input type="radio" id="medium" name="za_size" value="medium">
+          <label for="medium">Medium</label><br>
+          <input type="radio" id="large" name="za_size" value="large">
+          <label for="large">Large</label>
+        </div>
+        
+        <!--topping selection-->
+        <h3>Select Topping Quantity</h3>
+        <div id="topping_quantity">
+          <select name="toppings" id="toppings" required>
+            <!--default dropdown text (disabled and hidden after other option in dd menu selected)-->
+            <option value="" selected disabled hidden>Select topping quantity</option>
+            <option value="no_toppings">No toppings</option>
+            <option value="one_topping">One topping</option>
+            <option value="two_toppings">Two toppings</option>
+          </select>
+        </div><br>
+
+        <div id="submit_form">
+          <input type="submit" value="Submit Your Order">
+        </div>
+        </form>
+	<script src="script.js"></script>
+  </body>
+</html>
