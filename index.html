@@ -1,44 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HW 3
-    </title>
-    <link rel="stylesheet" href="/main.css">
+    <title>Pizza Order Form</title>
   </head>
   <body>
-        <h1>Pizza Order</h1> 
+    <form id="za_form">
+      
+      <h2>Pizza Size</h2>
+      <div id="za_size"></div>
+      <h3>
+      <input type="radio" name="size" value="small">
+      <label for="small">Small ($7.00)</label><br>
+      <input type="radio" name="size" value="medium">
+      <label for="medium">Medium ($10.00)</label><br>
+      <input type="radio" name="size" value="large">
+      <label for="Large">Large ($14.00)</label><br>
+      </h3>
+      
+      <h2>Toppings</h2>
+      <select name="toppings">
+        <option value="no_toppings">No Toppings</option>
+        <option value="one_topping">One Topping (+ $2.00)</option>
+        <option value="two_toppings">Two Topping (+ $3.00)</option>
+      </select>
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <p id="price"></p>
 
-        <form action="/order_complete.html">
-
-        <!--pizza size-->
-        <h3>Select Pizza Size</h3>
-        <div id="pizza_size">
-          <input type="radio" id="small" name="za_size" value="small" required>
-          <label for="small">Small</label><br>
-          <input type="radio" id="medium" name="za_size" value="medium">
-          <label for="medium">Medium</label><br>
-          <input type="radio" id="large" name="za_size" value="large">
-          <label for="large">Large</label>
-        </div>
-        
-        <!--topping selection-->
-        <h3>Select Topping Quantity</h3>
-        <div id="topping_quantity">
-          <select name="toppings" id="toppings" required>
-            <!--default dropdown text (disabled and hidden after other option in dd menu selected)-->
-            <option value="" selected disabled hidden>Select topping quantity</option>
-            <option value="no_toppings">No toppings</option>
-            <option value="one_topping">One topping</option>
-            <option value="two_toppings">Two toppings</option>
-          </select>
-        </div><br>
-
-        <div id="submit_form">
-          <input type="submit" value="Submit Your Order">
-        </div>
-        </form>
-	<script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
